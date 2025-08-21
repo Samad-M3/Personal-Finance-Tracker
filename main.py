@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
+import numpy as np 
 from datetime import datetime
 import sys
 
@@ -17,7 +18,7 @@ def menu():
     elif option == 2:
         sub_menu()
     elif option == 3:
-        exit()
+        sys.exit(0)
 
 def add_transaction():
     add_transaction_bool = True
@@ -68,8 +69,8 @@ def add_transaction():
 
 def sub_menu():
     df = pd.read_csv("transactions.csv") # Reading from CSV file    
-    date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y") # Converting the dates column from strings to datetime objects 
-    df["Date"] = date_object
+    date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+    df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
 
     print(f"\n1) View by month \n2) View by category \n3) View all-time spending by category \n4) Go back")
     option = int(input(f"\nSelect an option: ")) 
@@ -88,7 +89,47 @@ def sub_menu():
 
         print(f"\nTotal income: £{total_income:.2f} \nTotal expenses: £{total_expenses:.2f}")
 
-        sub_menu()
+        visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+
+        if visualise_transaction.lower() == "yes":
+            summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
+
+            ''' Bar Chart 1 '''
+            x1 = np.array(summary_without_income.index)
+            y1 = np.array(summary_without_income.values.__abs__())
+
+            plt.subplot(3, 1, 1)
+            plt.bar(x1, y1, width = 0.6)
+            
+            plt.title("Expenses by Category")
+            plt.xlabel("Categories")
+            plt.ylabel("Amount (£)")
+
+            ''' Bar Chart 2 '''
+            x2 = np.array(["Total Income", "Total Expenses"])
+            y2 = np.array([total_income, total_expenses * -1])
+            colours = ["#2ECC71", "#E74C3C"]
+
+            plt.subplot(3, 1, 2)
+            plt.barh(x2, y2, color = colours)
+
+            plt.title("Total income VS Total expenses")
+            plt.xlabel("Amount (£)")
+
+            ''' Pie Chart '''
+            pie_chart_labels = x1
+            y3 = y1
+
+            plt.subplot(3, 1, 3)
+            plt.pie(y3, labels = pie_chart_labels)
+            plt.title("Expense Breakdown")
+
+            plt.tight_layout()
+            plt.show()
+
+        elif visualise_transaction.lower() == "no":
+            sub_menu()
+
     elif option == 2:
         category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from above: ").strip().title()
         print(f"\nSummary for {category} category:\n")
