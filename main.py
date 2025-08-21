@@ -55,8 +55,11 @@ with open("transactions.csv", "a", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=headers)
     writer.writerows(transactions)
 
-df = pd.read_csv("transactions.csv")
-# print(df.to_string())
+df = pd.read_csv("transactions.csv") # Reading from CSV file
+# print(df.to_string()) 
+
+date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y") # Converting the dates column from strings to datetime objects 
+df["Date"] = date_object
 
 """ Hard-coded filtering """
 
@@ -68,15 +71,17 @@ df = pd.read_csv("transactions.csv")
 
 ''' Filter by Month '''
 
-# print(df[df["Date"].str.contains("-09-")]) 
-# print(df[df["Date"].str.contains("-10-")])
-# print(df[df["Date"].str.contains("-12-")])
+# print(df[df["Date"].dt.month == 9])
+# print(df[df["Date"].dt.month == 10])
+# print(df[df["Date"].dt.month == 12])
 
 ''' Combined Filters '''
 
-# print(df[(df["Category"] == "Food") & (df["Date"].str.contains("-11-"))])
-# print(df[(df["Category"] == "Entertainment") & (df["Date"].str.contains("-08-"))])
+# print(df[(df["Category"] == "Food") & (df["Date"].dt.month == 11)])
+# print(df[(df["Category"] == "Entertainment") & (df["Date"].dt.month == 8)])
 
 ''' Aggregation '''
 
-# print(df[df["Date"].str.contains("-10-")].groupby("Category")["Amount"].sum()) # Total spending per category in October
+print(df[df["Date"].dt.month == 10].groupby("Category")["Amount"].sum()) # Total spending per category in October
+# print(df.groupby(df["Date"].dt.month_name())["Amount"].sum()) # Total spending for each month
+# print(df["Amount"].max()) # Largest single transaction
