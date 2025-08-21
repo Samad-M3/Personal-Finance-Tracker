@@ -3,7 +3,23 @@ import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
 from datetime import datetime
+import sys
 
+def menu():
+    print(f"\n1) Add a transaction \n2) View transaction(s) \n3) Exit")
+    option = int(input(f"\nSelect an option to begin: "))
+
+    if option == 1:
+        pass
+    elif option == 2:
+        pass
+    elif option == 3:
+        print("Closing program")
+        sys.exit(0)
+
+menu()
+
+'''
 transactions = []
 
 add_transaction = True
@@ -61,6 +77,8 @@ df = pd.read_csv("transactions.csv") # Reading from CSV file
 date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y") # Converting the dates column from strings to datetime objects 
 df["Date"] = date_object
 
+'''
+
 """ Hard-coded filtering """
 
 ''' Filter by Category '''
@@ -82,6 +100,6 @@ df["Date"] = date_object
 
 ''' Aggregation '''
 
-print(df[df["Date"].dt.month == 10].groupby("Category")["Amount"].sum()) # Total spending per category in October
+# print(df[df["Date"].dt.month == 10].groupby("Category")["Amount"].sum()) # Total spending per category in October
 # print(df.groupby(df["Date"].dt.month_name())["Amount"].sum()) # Total spending for each month
 # print(df["Amount"].max()) # Largest single transaction
