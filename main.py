@@ -18,7 +18,7 @@ def menu():
     elif option == 2:
         sub_menu()
     elif option == 3:
-        sys.exit(0)
+        exit_program()
 
 def add_transaction():
     add_transaction_bool = True
@@ -81,6 +81,7 @@ def sub_menu():
 
         summary = df[df["Date"].dt.month_name() == month].groupby("Category")["Amount"].sum()
         summary.index.name = None
+
         total_income = df[(df["Date"].dt.month_name() == month) & (df["Category"].isin(["Income", "Refund"]))]["Amount"].sum()
         total_expenses = df[(df["Date"].dt.month_name() == month) & (df["Category"].isin(["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts"]))]["Amount"].sum()
 
@@ -94,41 +95,42 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
 
-            ''' Bar Chart 1 '''
+            ''' Chart 1 '''
             x1 = np.array(summary_without_income.index)
             y1 = np.array(summary_without_income.values.__abs__())
 
             plt.subplot(3, 1, 1)
+            plt.grid(axis = 'y', alpha = 0.3)
             plt.bar(x1, y1, width = 0.6)
             
-            plt.title("Expenses by Category")
+            plt.title("Expenses per Category")
             plt.xlabel("Categories")
             plt.ylabel("Amount (£)")
 
-            ''' Bar Chart 2 '''
+            ''' Chart 2 '''
             x2 = np.array(["Total Income", "Total Expenses"])
             y2 = np.array([total_income, total_expenses * -1])
             colours = ["#2ECC71", "#E74C3C"]
 
             plt.subplot(3, 1, 2)
+            plt.grid(axis = 'x', alpha = 0.3)
             plt.barh(x2, y2, color = colours)
 
-            plt.title("Total income VS Total expenses")
+            plt.title("Total Income VS Total Expenses")
             plt.xlabel("Amount (£)")
 
-            ''' Pie Chart '''
+            ''' Chart 3 '''
             pie_chart_labels = x1
             y3 = y1
 
             plt.subplot(3, 1, 3)
             plt.pie(y3, labels = pie_chart_labels)
-            plt.title("Expense Breakdown")
+            plt.title("Expenses Breakdown")
 
             plt.tight_layout()
             plt.show()
 
-        elif visualise_transaction.lower() == "no":
-            sub_menu()
+        sub_menu()
 
     elif option == 2:
         category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from above: ").strip().title()
@@ -137,20 +139,117 @@ def sub_menu():
         summary = df[df["Category"] == category].groupby(df["Date"].dt.month)["Amount"].sum()
         summary.index.name = None
         number_of_transactions = df[df["Category"] == category].groupby(df["Date"].dt.month)["Amount"].count()
+        amount_of_transactions_per_month = []
 
         for month, amount in summary.items():
             count = number_of_transactions.get(month)
+            amount_of_transactions_per_month.append(count)
             print(f"{calendar[month]}: £{amount:.2f} ({count} transaction(s), avg per transaction: £{amount/count:.2f})")
-        
+
+        visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+
+        if visualise_transaction.lower() == "yes":
+            month_names = [calendar[m] for m in summary.index]
+
+            if category.lower() == "income":
+                chart1_title = "Monthly Total Income"
+                chart2_title = "Average Income per Transaction"
+                chart3_title = "Number of Income Transactions"
+            elif category.lower() == "refund":
+                chart1_title = "Monthly Total Refund"
+                chart2_title = "Average Refund per Transaction"
+                chart3_title = "Number of Refund Transactions"
+            elif category.lower() in ["food", "entertainment", "bills", "leisure", "transport", "shopping", "gifts"]:
+                chart1_title = "Monthly Total Spend"
+                chart2_title = "Average Spend per Transaction"
+                chart3_title = "Number of Transactions"
+
+            ''' Chart 1'''
+            x1 = np.array(month_names)
+            y1 = np.array(summary.values.__abs__())
+
+            plt.subplot(3, 1, 1)
+            plt.bar(x1, y1)
+
+            plt.title(chart1_title)
+            plt.xlabel("Months")
+            plt.ylabel("Amount (£)")
+
+            ''' Chart 2 '''  
+
+            x2 = np.array(month_names)
+            y2 = np.array(summary.values.__abs__() / amount_of_transactions_per_month)
+
+            plt.subplot(3, 1, 2)
+            plt.grid(alpha = 0.3)
+            plt.plot(x2, y2, marker = "o", mec = "k", mfc = "g", c = "#2ca02c", ls = "-", mew = 0.8,  ms = 7)
+
+            plt.title(chart2_title)
+            plt.xlabel("Months")
+            plt.ylabel("Amount (£)")
+
+            ''' Chart 3 '''
+
+            x3 = np.array(month_names)
+            y3 = np.array(amount_of_transactions_per_month)
+
+            plt.subplot(3, 1, 3)
+            plt.bar(x3, y3, color = "#ff7f0e")
+
+            plt.title(chart3_title)
+            plt.xlabel("Months")
+            plt.ylabel("Count")
+
+            plt.tight_layout()
+            plt.show()
+
         sub_menu()
+
     elif option == 3:
         print(f"\nAll-time spending per category:\n")
 
         summary = df.groupby("Category")["Amount"].sum()
         summary.index.name = None
 
+        total_income = df[df["Category"].isin(["Income", "Refund"])]["Amount"].sum()
+        total_expenses = df[df["Category"].isin(["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts"])]["Amount"].sum()
+
         for category, amount in summary.items():
             print(f"{category}: £{amount:.2f}")
+
+        print(f"\nTotal income: £{total_income:.2f} \nTotal expenses: £{total_expenses:.2f}")
+
+        visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+
+        if visualise_transaction.lower() == "yes":
+            summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
+            
+            ''' Chart 1 '''
+            x1 = np.array(summary_without_income.index)
+            y1 = np.array(summary_without_income.values.__abs__())
+
+            plt.subplot(2, 1, 1)
+            plt.grid(axis='y', alpha = 0.3)
+            plt.bar(x1, y1, width = 0.6)
+            
+            plt.title("Expenses per Category")
+            plt.xlabel("Categories")
+            plt.ylabel("Amount (£)")
+
+            ''' Chart 2 '''
+            x2 = np.array(["Total Income", "Total Expenses"])
+            y2 = np.array([total_income, total_expenses * -1])
+            colours = ["#2ECC71", "#E74C3C"]
+
+            plt.subplot(2, 1, 2)
+            plt.grid(axis = 'x', alpha = 0.3)
+            plt.barh(x2, y2, color = colours, height = 0.6)
+
+            plt.title("Total Income VS Total Expenses")
+            plt.xlabel("Amount (£)")
+
+            plt.tight_layout()
+            plt.show()
         
         sub_menu()
     elif option == 4:
