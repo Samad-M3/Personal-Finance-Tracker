@@ -95,7 +95,7 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
 
-            fig = plt.figure()
+            fig = plt.figure(figsize = (8, 5))
             fig.canvas.manager.set_window_title(f"Month: {month}")
 
             ''' Chart 1 '''
@@ -169,7 +169,7 @@ def sub_menu():
                 chart2_title = "Average Spend per Transaction"
                 chart3_title = "Number of Transactions"
 
-            fig = plt.figure()
+            fig = plt.figure(figsize = (8, 5))
             fig.canvas.manager.set_window_title(f"Category: {category}")
 
             ''' Chart 1'''
@@ -231,7 +231,7 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             month_names = [calendar[m] for m in net.index]
 
-            fig = plt.figure()
+            fig = plt.figure(figsize = (8, 5))
             fig.canvas.manager.set_window_title(f"Cumulative Net Balance")
 
             ''' Chart 1 '''
@@ -286,7 +286,7 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
             
-            fig = plt.figure()
+            fig = plt.figure(figsize = (8, 5))
             fig.canvas.manager.set_window_title(f"All-time Overview")
 
             ''' Chart 1 '''
