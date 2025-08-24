@@ -7,7 +7,7 @@ from datetime import datetime
 import sys
 
 transactions = []
-calendar = {1: "January", 2: "February", 3: "March", 4: "Arpil", 5: "May", 6: "June", 7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
+calendar = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 def menu():
     print(f"\n1) Add a transaction \n2) View transaction(s) \n3) Exit")
@@ -95,6 +95,9 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
 
+            fig = plt.figure()
+            fig.canvas.manager.set_window_title(f"Month: {month}")
+
             ''' Chart 1 '''
             x1 = np.array(summary_without_income.index)
             y1 = np.array(summary_without_income.values.__abs__())
@@ -166,6 +169,9 @@ def sub_menu():
                 chart2_title = "Average Spend per Transaction"
                 chart3_title = "Number of Transactions"
 
+            fig = plt.figure()
+            fig.canvas.manager.set_window_title(f"Category: {category}")
+
             ''' Chart 1'''
             x1 = np.array(month_names)
             y1 = np.array(summary.values.__abs__())
@@ -225,6 +231,9 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             month_names = [calendar[m] for m in net.index]
 
+            fig = plt.figure()
+            fig.canvas.manager.set_window_title(f"Cumulative Net Balance")
+
             ''' Chart 1 '''
             x1 = np.array(month_names)
             y1 = np.array(net.values)
@@ -233,7 +242,7 @@ def sub_menu():
             plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x1, y1)
 
-            plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
+            # plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
 
             plt.title("Monthly Net Balance (Income - Expenses)")
             plt.xlabel("Months")
@@ -247,7 +256,7 @@ def sub_menu():
             plt.grid(alpha = 0.3, linestyle = '--')
             plt.plot(x2, y2, marker = "o", mfc = "#00BFFF", c = "#00BFFF", linestyle = "--", linewidth =  1, ms = 4)
 
-            plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
+            # plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
 
             plt.title("Cumulative Net Balance Over Time")
             plt.xlabel("Months")
@@ -277,6 +286,9 @@ def sub_menu():
         if visualise_transaction.lower() == "yes":
             summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
             
+            fig = plt.figure()
+            fig.canvas.manager.set_window_title(f"All-time Overview")
+
             ''' Chart 1 '''
             x1 = np.array(summary_without_income.index)
             y1 = np.array(summary_without_income.values.__abs__())
