@@ -60,7 +60,8 @@ def add_transaction():
 
             with open("transactions.csv", "a", newline="") as f:
                 writer = csv.DictWriter(f, fieldnames=headers)
-                writer.writerows(transactions)
+                writer.writerows(transactions) 
+                transactions.clear() # Prevent duplicates on next addition
 
             print(f"\n{count} transaction(s) added successfully")
 
@@ -68,7 +69,7 @@ def add_transaction():
             # add_transaction_bool = False
 
 def sub_menu():
-    df = pd.read_csv("transactions.csv") # Reading from CSV file    
+    df = pd.read_csv("transactions.csv") # Reading from CSV file  
     date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
     df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
 
@@ -106,7 +107,7 @@ def sub_menu():
             # plt.grid(axis = 'y', alpha = 0.3)
             plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x1, y1, width = 0.6)
-            
+
             plt.title("Expenses per Category")
             plt.xlabel("Categories")
             plt.ylabel("Amount (£)")
