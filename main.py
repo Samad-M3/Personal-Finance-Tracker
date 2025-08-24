@@ -72,7 +72,7 @@ def sub_menu():
     date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
     df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
 
-    print(f"\n1) View by month \n2) View by category \n3) View all-time spending by category \n4) Go back")
+    print(f"\n1) View by month \n2) View by category \n3) View cumulative net balance \n4) View all-time overview \n5) Go back")
     option = int(input(f"\nSelect an option: ")) 
 
     if option == 1:
@@ -100,7 +100,8 @@ def sub_menu():
             y1 = np.array(summary_without_income.values.__abs__())
 
             plt.subplot(3, 1, 1)
-            plt.grid(axis = 'y', alpha = 0.3)
+            # plt.grid(axis = 'y', alpha = 0.3)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x1, y1, width = 0.6)
             
             plt.title("Expenses per Category")
@@ -113,7 +114,8 @@ def sub_menu():
             colours = ["#2ECC71", "#E74C3C"]
 
             plt.subplot(3, 1, 2)
-            plt.grid(axis = 'x', alpha = 0.3)
+            # plt.grid(axis = 'x', alpha = 0.3)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.barh(x2, y2, color = colours)
 
             plt.title("Total Income VS Total Expenses")
@@ -169,6 +171,7 @@ def sub_menu():
             y1 = np.array(summary.values.__abs__())
 
             plt.subplot(3, 1, 1)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x1, y1)
 
             plt.title(chart1_title)
@@ -176,24 +179,24 @@ def sub_menu():
             plt.ylabel("Amount (£)")
 
             ''' Chart 2 '''  
-
             x2 = np.array(month_names)
             y2 = np.array(summary.values.__abs__() / amount_of_transactions_per_month)
 
             plt.subplot(3, 1, 2)
-            plt.grid(alpha = 0.3)
-            plt.plot(x2, y2, marker = "o", mec = "k", mfc = "g", c = "#2ca02c", ls = "-", mew = 0.8,  ms = 7)
+            # plt.grid(alpha = 0.3)
+            plt.grid(alpha = 0.3, linestyle = '--')
+            plt.plot(x2, y2, marker = "o", mfc = "#2ca02c", c = "#2ca02c", ls = "--", linewidth =  1, ms = 4)
 
             plt.title(chart2_title)
             plt.xlabel("Months")
             plt.ylabel("Amount (£)")
 
             ''' Chart 3 '''
-
             x3 = np.array(month_names)
             y3 = np.array(amount_of_transactions_per_month)
 
             plt.subplot(3, 1, 3)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x3, y3, color = "#ff7f0e")
 
             plt.title(chart3_title)
@@ -206,7 +209,57 @@ def sub_menu():
         sub_menu()
 
     elif option == 3:
-        print(f"\nAll-time spending per category:\n")
+        print(f"\nCumulative net balance:\n")
+
+        total_income_per_month = df[df["Category"].isin(["Income", "Refund"])].groupby(df["Date"].dt.month)["Amount"].sum()
+        total_expenses_per_month = df[df["Category"].isin(["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts"])].groupby(df["Date"].dt.month)["Amount"].sum()
+        net = total_income_per_month + total_expenses_per_month
+        cumulative_net_balance = net.cumsum()
+        net.index.name = None
+
+        for month, amount in cumulative_net_balance.items():
+            print(f"{calendar[month]}: £{amount:.2f}")
+
+        visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+
+        if visualise_transaction.lower() == "yes":
+            month_names = [calendar[m] for m in net.index]
+
+            ''' Chart 1 '''
+            x1 = np.array(month_names)
+            y1 = np.array(net.values)
+
+            plt.subplot(2, 1, 1)
+            plt.grid(alpha = 0.3, linestyle = '--')
+            plt.bar(x1, y1)
+
+            plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
+
+            plt.title("Monthly Net Balance (Income - Expenses)")
+            plt.xlabel("Months")
+            plt.ylabel("Net (£)")
+
+            ''' Chart 2 '''
+            x2 = np.array(month_names)
+            y2 = np.array(cumulative_net_balance.values)
+
+            plt.subplot(2, 1, 2)
+            plt.grid(alpha = 0.3, linestyle = '--')
+            plt.plot(x2, y2, marker = "o", mfc = "#00BFFF", c = "#00BFFF", linestyle = "--", linewidth =  1, ms = 4)
+
+            plt.axhline(y = 0, color = 'k', linestyle = '-', linewidth = 1)
+
+            plt.title("Cumulative Net Balance Over Time")
+            plt.xlabel("Months")
+            plt.ylabel("Cumulative (£)")
+
+            plt.tight_layout()
+            plt.show()
+
+        sub_menu()
+
+    elif option == 4:
+        print(f"\nAll-time overview per category:\n")
 
         summary = df.groupby("Category")["Amount"].sum()
         summary.index.name = None
@@ -229,7 +282,8 @@ def sub_menu():
             y1 = np.array(summary_without_income.values.__abs__())
 
             plt.subplot(2, 1, 1)
-            plt.grid(axis='y', alpha = 0.3)
+            # plt.grid(axis='y', alpha = 0.3)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.bar(x1, y1, width = 0.6)
             
             plt.title("Expenses per Category")
@@ -242,7 +296,8 @@ def sub_menu():
             colours = ["#2ECC71", "#E74C3C"]
 
             plt.subplot(2, 1, 2)
-            plt.grid(axis = 'x', alpha = 0.3)
+            # plt.grid(axis = 'x', alpha = 0.3)
+            plt.grid(alpha = 0.3, linestyle = '--')
             plt.barh(x2, y2, color = colours, height = 0.6)
 
             plt.title("Total Income VS Total Expenses")
@@ -252,7 +307,8 @@ def sub_menu():
             plt.show()
         
         sub_menu()
-    elif option == 4:
+
+    elif option == 5:
         menu()
    
 def exit_program():
