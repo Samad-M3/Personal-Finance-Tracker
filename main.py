@@ -9,6 +9,13 @@ import sys
 transactions = []
 calendar = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
 
+if Path("transactions.csv").exists():
+    df = pd.read_csv("transactions.csv") # Reading from CSV file  
+    date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+    df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
+
+
+
 def menu():
     print(f"\n1) Add a transaction \n2) View transaction(s) \n3) Exit")
     option = int(input(f"\nSelect an option: "))
@@ -77,7 +84,10 @@ def sub_menu():
     option = int(input(f"\nSelect an option: ")) 
 
     if option == 1:
-        month = input("Enter the full month name: ").strip().title()
+        month = input(f"\nEnter the full month name: ").strip().title()
+
+        print(f"\n----------------------------")
+
         print(f"\nSummary for {month}:\n")
 
         summary = df[df["Date"].dt.month_name() == month].groupby("Category")["Amount"].sum()
@@ -90,6 +100,8 @@ def sub_menu():
             print(f"{category}: £{amount:.2f}")
 
         print(f"\nTotal income: £{total_income:.2f} \nTotal expenses: £{total_expenses:.2f}")
+
+        print(f"\n----------------------------")
 
         visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
 
@@ -139,7 +151,10 @@ def sub_menu():
         sub_menu()
 
     elif option == 2:
-        category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from above: ").strip().title()
+        category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from the above: ").strip().title()
+
+        print(f"\n----------------------------")
+
         print(f"\nSummary for {category} category:\n")
 
         summary = df[df["Category"] == category].groupby(df["Date"].dt.month)["Amount"].sum()
@@ -151,6 +166,8 @@ def sub_menu():
             count = number_of_transactions.get(month)
             amount_of_transactions_per_month.append(count)
             print(f"{calendar[month]}: £{amount:.2f} ({count} transaction(s), avg per transaction: £{amount/count:.2f})")
+
+        print(f"\n----------------------------")
 
         visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
 
@@ -216,6 +233,8 @@ def sub_menu():
         sub_menu()
 
     elif option == 3:
+        print(f"\n----------------------------")
+
         print(f"\nCumulative net balance:\n")
 
         total_income_per_month = df[df["Category"].isin(["Income", "Refund"])].groupby(df["Date"].dt.month)["Amount"].sum()
@@ -226,6 +245,8 @@ def sub_menu():
 
         for month, amount in cumulative_net_balance.items():
             print(f"{calendar[month]}: £{amount:.2f}")
+
+        print(f"\n----------------------------")
 
         visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
 
@@ -269,6 +290,8 @@ def sub_menu():
         sub_menu()
 
     elif option == 4:
+        print(f"\n----------------------------")
+
         print(f"\nAll-time overview per category:\n")
 
         summary = df.groupby("Category")["Amount"].sum()
@@ -281,6 +304,8 @@ def sub_menu():
             print(f"{category}: £{amount:.2f}")
 
         print(f"\nTotal income: £{total_income:.2f} \nTotal expenses: £{total_expenses:.2f}")
+
+        print(f"\n----------------------------")
 
         visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
 
