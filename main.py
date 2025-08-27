@@ -8,13 +8,14 @@ import sys
 
 transactions = []
 calendar = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
+headers = ["Date", "Category", "Amount", "Description"]
 
 if Path("transactions.csv").exists():
     df = pd.read_csv("transactions.csv") # Reading from CSV file  
     date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
     df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
-
-
+else:
+    df = pd.DataFrame(columns = headers)
 
 def menu():
     print(f"\n1) Add a transaction \n2) View transaction(s) \n3) Exit")
@@ -28,6 +29,7 @@ def menu():
         exit_program()
 
 def add_transaction():
+    global df
     add_transaction_bool = True
     count = 0
 
@@ -48,6 +50,14 @@ def add_transaction():
             "Description":description
         }
 
+        new_row = {
+            "Date": pd.to_datetime(date, format = "%d-%m-%Y"),
+            "Category": category,
+            "Amount": amount,
+            "Description":description
+        }
+        df = pd.concat([df, pd.DataFrame([new_row])], ignore_index = True)
+
         transactions.append(transaction)
 
         print("")
@@ -58,15 +68,14 @@ def add_transaction():
             pass
         elif add_another_transaction.lower() == "no":
             file_exists = Path("transactions.csv").exists()
-            headers = ["Date", "Category", "Amount", "Description"]
 
             if not file_exists:
-                with open("transactions.csv", "w", newline="") as f:
-                    writer = csv.DictWriter(f, fieldnames=headers)
+                with open("transactions.csv", "w", newline = "") as f:
+                    writer = csv.DictWriter(f, fieldnames = headers)
                     writer.writeheader()
 
-            with open("transactions.csv", "a", newline="") as f:
-                writer = csv.DictWriter(f, fieldnames=headers)
+            with open("transactions.csv", "a", newline = "") as f:
+                writer = csv.DictWriter(f, fieldnames = headers)
                 writer.writerows(transactions) 
                 transactions.clear() # Prevent duplicates on next addition
 
@@ -76,9 +85,9 @@ def add_transaction():
             # add_transaction_bool = False
 
 def sub_menu():
-    df = pd.read_csv("transactions.csv") # Reading from CSV file  
-    date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
-    df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
+    # df = pd.read_csv("transactions.csv") # Reading from CSV file  
+    # date_object = pd.to_datetime(df["Date"], format="%d-%m-%Y")
+    # df["Date"] = date_object # Converting the dates column from strings to datetime objects to help with filtering transactions
 
     print(f"\n1) View by month \n2) View by category \n3) View cumulative net balance \n4) View all-time overview \n5) Go back")
     option = int(input(f"\nSelect an option: ")) 
