@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np 
 from datetime import datetime
 import sys
+import calendar
 
 months_abbr = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
+months_full = list(calendar.month_name)[1:]
 valid_categories = ["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts", "Income", "Refund"]
 headers = ["Date", "Category", "Amount", "Description"]
 
@@ -99,17 +101,17 @@ def add_transaction():
 
         while True:
             try:
-                add_another_transaction = input("Would you like to add another transaction (yes/no)? ").strip().lower()
-                if add_another_transaction != "yes" and add_another_transaction != "no":
+                add_another_transaction = input("Would you like to add another transaction (Yes/No)? ").strip().capitalize()
+                if add_another_transaction != "Yes" and add_another_transaction != "No":
                     raise ValueError("Incorrect value entered")
             except ValueError as e:
                 print(e)
             else:
                 break
         
-        if add_another_transaction == "yes":
+        if add_another_transaction == "Yes":
             pass
-        elif add_another_transaction == "no":
+        elif add_another_transaction == "No":
             # Save the whole df to CSV in one go
             df_to_save = df.copy()
             df_to_save["Date"] = df_to_save["Date"].dt.strftime("%d-%m-%Y")
@@ -120,10 +122,26 @@ def add_transaction():
 
 def sub_menu():
     while True:
-        option = int(input(f"\n1) View by month \n2) View by category \n3) View cumulative net balance \n4) View all-time overview \n5) Go back \n\nSelect an option: ")) 
+        while True:
+            try:
+                option = int(input(f"\n1) View by month \n2) View by category \n3) View cumulative net balance \n4) View all-time overview \n5) Go back \n\nSelect an option: "))
+                if option < 1 or option > 5:
+                    raise ValueError("Input must be between 1 and 5")
+            except ValueError as e:
+                print(e)
+            else:
+                break 
 
         if option == 1:
-            month = input(f"\nEnter the full month name: ").strip().capitalize()
+            while True:
+                try: 
+                    month = input(f"\nEnter the full month name: ").strip().capitalize()
+                    if month not in months_full:
+                        raise ValueError("Incorrect month name")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
             print(f"\n----------------------------")
 
@@ -131,7 +149,6 @@ def sub_menu():
 
             summary = df[df["Date"].dt.month_name() == month].groupby("Category")["Amount"].sum()
             summary.index.name = None
-
             total_income = df[(df["Date"].dt.month_name() == month) & (df["Category"].isin(["Income", "Refund"]))]["Amount"].sum()
             total_expenses = df[(df["Date"].dt.month_name() == month) & (df["Category"].isin(["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts"]))]["Amount"].sum()
 
@@ -142,9 +159,17 @@ def sub_menu():
 
             print(f"\n----------------------------")
 
-            visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+            while True:
+                try:
+                    visualise_transaction = input(f"\nWould you like a visual representation of this data (Yes/No)? ").strip().capitalize()
+                    if visualise_transaction != "Yes" and visualise_transaction != "No":
+                        raise ValueError("Incorrect value entered")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
-            if visualise_transaction.lower() == "yes":
+            if visualise_transaction == "Yes":
                 summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
 
                 fig = plt.figure(figsize = (8, 5))
@@ -186,7 +211,15 @@ def sub_menu():
                 plt.show()
 
         elif option == 2:
-            category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from the above: ").strip().capitalize()
+            while True:
+                try:
+                    category = input(f"\nCategories: \n\nFood\nEntertainment\nBills\nLeisure\nTransport\nShopping\nGifts\nIncome\nRefund \n\nEnter a valid category from the above: ").strip().capitalize()
+                    if category not in valid_categories:
+                        raise ValueError("Not a valid category")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
             print(f"\n----------------------------")
 
@@ -204,20 +237,28 @@ def sub_menu():
 
             print(f"\n----------------------------")
 
-            visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+            while True:
+                try:
+                    visualise_transaction = input(f"\nWould you like a visual representation of this data (Yes/No)? ").strip().capitalize()
+                    if visualise_transaction != "Yes" and visualise_transaction != "No":
+                        raise ValueError("Incorrect value entered")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
-            if visualise_transaction.lower() == "yes":
+            if visualise_transaction == "Yes":
                 month_names = [months_abbr[m] for m in summary.index]
 
-                if category.lower() == "income":
+                if category == "Income":
                     chart1_title = "Monthly Total Income"
                     chart2_title = "Average Income per Transaction"
                     chart3_title = "Number of Income Transactions"
-                elif category.lower() == "refund":
+                elif category == "Refund":
                     chart1_title = "Monthly Total Refund"
                     chart2_title = "Average Refund per Transaction"
                     chart3_title = "Number of Refund Transactions"
-                elif category.lower() in ["food", "entertainment", "bills", "leisure", "transport", "shopping", "gifts"]:
+                elif category in ["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts"]:
                     chart1_title = "Monthly Total Spend"
                     chart2_title = "Average Spend per Transaction"
                     chart3_title = "Number of Transactions"
@@ -243,7 +284,7 @@ def sub_menu():
 
                 plt.subplot(3, 1, 2)
                 plt.grid(alpha = 0.3, linestyle = '--')
-                plt.plot(x2, y2, marker = "o", mfc = "#2ca02c", c = "#2ca02c", ls = "--", linewidth =  1, ms = 4)
+                plt.plot(x2, y2, marker = "o", mfc = "#2ca02c", c = "#2ca02c", ls = "--", linewidth =  1, markersize = 4)
 
                 plt.title(chart2_title)
                 plt.xlabel("Months")
@@ -280,13 +321,21 @@ def sub_menu():
 
             print(f"\n----------------------------")
 
-            visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+            while True:
+                try:
+                    visualise_transaction = input(f"\nWould you like a visual representation of this data (Yes/No)? ").strip().capitalize()
+                    if visualise_transaction != "Yes" and visualise_transaction != "No":
+                        raise ValueError("Incorrect value entered")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
-            if visualise_transaction.lower() == "yes":
+            if visualise_transaction == "Yes":
                 month_names = [months_abbr[m] for m in net.index]
 
                 fig = plt.figure(figsize = (8, 5))
-                fig.canvas.manager.set_window_title(f"Cumulative Net Balance")
+                fig.canvas.manager.set_window_title("Cumulative Net Balance")
 
                 ''' Chart 1 '''
                 x1 = np.array(month_names)
@@ -306,7 +355,7 @@ def sub_menu():
 
                 plt.subplot(2, 1, 2)
                 plt.grid(alpha = 0.3, linestyle = '--')
-                plt.plot(x2, y2, marker = "o", mfc = "#00BFFF", c = "#00BFFF", linestyle = "--", linewidth =  1, ms = 4)
+                plt.plot(x2, y2, marker = "o", mfc = "#00BFFF", c = "#00BFFF", linestyle = "--", linewidth =  1, markersize = 4)
 
                 plt.title("Cumulative Net Balance Over Time")
                 plt.xlabel("Months")
@@ -333,13 +382,21 @@ def sub_menu():
 
             print(f"\n----------------------------")
 
-            visualise_transaction = input(f"\nWould you like a visual representation of this data? ")
+            while True:
+                try:
+                    visualise_transaction = input(f"\nWould you like a visual representation of this data (Yes/No)? ").strip().capitalize()
+                    if visualise_transaction != "Yes" and visualise_transaction != "No":
+                        raise ValueError("Incorrect value entered")
+                except ValueError as e:
+                    print(e)
+                else:
+                    break
 
-            if visualise_transaction.lower() == "yes":
+            if visualise_transaction == "Yes":
                 summary_without_income = summary.drop(["Income", "Refund"], errors = "ignore")
                 
                 fig = plt.figure(figsize = (8, 5))
-                fig.canvas.manager.set_window_title(f"All-time Overview")
+                fig.canvas.manager.set_window_title("All-time Overview")
 
                 ''' Chart 1 '''
                 x1 = np.array(summary_without_income.index)
