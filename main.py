@@ -45,6 +45,13 @@ class FinanceTracker:
             df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y") # Converting the dates column from strings to datetime objects to help with filtering transactions
         else:
             df = pd.DataFrame(columns = FinanceTracker.HEADERS)
+            # Explicitly set dtypes so pandas doesn't guess column types when concatenating new rows
+            df = df.astype({
+                "Date": "datetime64[ns]",
+                "Category": "string",
+                "Amount": "float",
+                "Description": "string"
+            })
 
         self.df = df
 
@@ -279,6 +286,9 @@ class FinanceTracker:
         None
         """
 
+        if self.check_empty_df():
+            return 
+
         while True:
             try: 
                 month = input(f"\nEnter the full month name: ").strip().capitalize()
@@ -341,13 +351,18 @@ class FinanceTracker:
             plt.xlabel("Amount (£)")
 
             ''' Chart 3 '''
-            pie_chart_labels = x1
-            y3 = y1
+            expenses_df = self.df[self.df["Category"].isin(FinanceTracker.EXPENSE_CATEGORIES)]
+            
+            if not expenses_df.empty:
+                pie_chart_labels = x1
+                y3 = y1
 
-            plt.subplot(3, 1, 3)
-            plt.pie(y3, labels = pie_chart_labels)
-            plt.title("Expenses Breakdown")
-
+                plt.subplot(3, 1, 3)
+                plt.pie(y3, labels = pie_chart_labels)
+                plt.title("Expenses Breakdown")
+            else:
+                print(f"\nNo pie chart to display, no expenses have been recorded yet")
+            
             plt.tight_layout()
             plt.show()
 
@@ -377,6 +392,9 @@ class FinanceTracker:
         -------
         None
         """
+
+        if self.check_empty_df():
+            return
 
         while True:
             try:
@@ -461,7 +479,7 @@ class FinanceTracker:
 
             plt.title(chart3_title)
             plt.xlabel("Months")
-            plt.ylabel("Count")
+            plt.ylabel("Frequency")
 
             plt.tight_layout()
             plt.show()
@@ -486,6 +504,9 @@ class FinanceTracker:
         None
         """
 
+        if self.check_empty_df():
+            return
+
         print(f"\n----------------------------")
 
         print(f"\nCumulative Net Balance:\n")
@@ -496,7 +517,9 @@ class FinanceTracker:
         # Filter rows for categories in EXPENSE_CATEGORIES, then group by month and sum the amounts 
         total_expenses_per_month = self.df[self.df["Category"].isin(FinanceTracker.EXPENSE_CATEGORIES)].groupby(self.df["Date"].dt.month)["Amount"].sum()
 
-        net = total_income_per_month + total_expenses_per_month
+        # Add income and expenses per month, treating missing months as 0 instead of NaN (avoids gaps when one side is empty)
+        net = total_income_per_month.add(total_expenses_per_month, fill_value = 0)  
+
         cumulative_net_balance = net.cumsum() # Work out the cumulative net balance over time
 
         for month, amount in cumulative_net_balance.items():
@@ -555,6 +578,9 @@ class FinanceTracker:
         -------
         None
         """
+
+        if self.check_empty_df():
+            return
 
         print(f"\n----------------------------")
 
@@ -657,6 +683,25 @@ class FinanceTracker:
         df_to_save = self.df.copy()
         df_to_save["Date"] = df_to_save["Date"].dt.strftime("%d-%m-%Y") # Format the Date column as DD-MM-YYYY strings
         df_to_save.to_csv("transactions.csv", index = False) 
+
+    def check_empty_df(self):
+        """
+        Check if the DataFrame has no transactions yet.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        bool
+            True if the DataFrame is empty, False otherwise.
+        """
+
+        if self.df.empty:
+            print(f"\nNo transactions available, please add some first")
+            return True
+        return False
 
 ft = FinanceTracker()
 ft.menu()
