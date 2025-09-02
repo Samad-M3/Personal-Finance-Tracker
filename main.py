@@ -24,7 +24,7 @@ class FinanceTracker:
     MONTHS_ABBR = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
     MONTHS_FULL = list(calendar.month_name)[1:]
     HEADERS = ["Date", "Category", "Amount", "Description"]
-    VALID_CATEGORIES = ["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Gifts", "Income", "Refund"]
+    VALID_CATEGORIES = ["Food", "Entertainment", "Bills", "Leisure", "Transport", "Shopping", "Rent", "Income", "Refund"]
     INCOME_CATEGORIES = ["Income", "Refund"]
     EXPENSE_CATEGORIES = []
     for c in VALID_CATEGORIES:
@@ -539,7 +539,9 @@ class FinanceTracker:
 
             plt.subplot(2, 1, 1)
             plt.grid(alpha = 0.3, linestyle = '--')
-            plt.bar(x1, y1)
+            plt.axhline(0, color = "black", linewidth = 1)
+            colours =  ["#2ECC71" if v >= 0 else "#E74C3C" for v in y1]
+            plt.bar(x1, y1, color = colours)
 
             plt.title("Monthly Net Balance (Income - Expenses)")
             plt.xlabel("Months")

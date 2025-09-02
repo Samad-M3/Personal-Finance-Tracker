@@ -1,254 +1,572 @@
 Date,Category,Amount,Description
-01-01-2025,Entertainment,-14.0,Netflix
-02-01-2025,Food,-12.5,Lunch
-03-01-2025,Leisure,-25.0,Cinema
-05-01-2025,Transport,-3.0,Bus fare
-06-01-2025,Income,1200.0,Part-time job paycheck
-07-01-2025,Bills,-50.0,Phone bill
-08-01-2025,Shopping,-60.0,New shoes
-09-01-2025,Food,-18.0,Dinner out
-11-01-2025,Leisure,-20.0,Bowling
-12-01-2025,Transport,-4.0,Taxi
-13-01-2025,Gifts,-30.0,Birthday present
-15-01-2025,Food,-10.0,Takeaway
-16-01-2025,Entertainment,-20.0,Concert
-17-01-2025,Income,200.0,Freelance gig
-19-01-2025,Shopping,-45.0,Books
-20-01-2025,Refund,20.0,Returned item
-22-01-2025,Leisure,-15.0,Swimming
-23-01-2025,Bills,-110.0,Utility bill
-25-01-2025,Transport,-3.0,Train
-27-01-2025,Food,-11.0,Lunch
-30-01-2025,Entertainment,-18.0,Theatre
-01-02-2025,Leisure,-20.0,Cinema
-02-02-2025,Food,-16.0,Groceries
-03-02-2025,Transport,-3.5,Bus fare
-04-02-2025,Income,1200.0,Part-time job paycheck
-05-02-2025,Bills,-55.0,Phone bill
-06-02-2025,Shopping,-80.0,New jacket
-07-02-2025,Entertainment,-18.0,Spotify
-08-02-2025,Food,-12.5,Lunch
-10-02-2025,Leisure,-20.0,Mini golf
-11-02-2025,Gifts,-30.0,Birthday present
-12-02-2025,Transport,-5.0,Taxi
-14-02-2025,Food,-19.0,Dinner out
-15-02-2025,Entertainment,-25.0,Theatre
-16-02-2025,Refund,25.0,Returned jumper
-17-02-2025,Income,200.0,Freelance gig
-18-02-2025,Shopping,-50.0,Books
-20-02-2025,Leisure,-18.0,Swimming
-21-02-2025,Food,-11.0,Takeaway
-23-02-2025,Bills,-115.0,Utility bill
-25-02-2025,Transport,-2.5,Bus fare
-28-02-2025,Entertainment,-15.0,Netflix
-01-03-2025,Food,-15.0,Groceries
-02-03-2025,Leisure,-20.0,Cinema
-03-03-2025,Transport,-3.0,Bus fare
-04-03-2025,Income,1200.0,Part-time job paycheck
-05-03-2025,Entertainment,-15.0,Netflix
-06-03-2025,Shopping,-70.0,New jacket
-07-03-2025,Food,-12.0,Lunch
-08-03-2025,Gifts,-30.0,Birthday present
-10-03-2025,Leisure,-25.0,Bowling
-11-03-2025,Transport,-4.0,Taxi
-12-03-2025,Food,-18.0,Dinner out
-14-03-2025,Bills,-110.0,Utility bill
-15-03-2025,Entertainment,-28.0,Theatre
-17-03-2025,Income,250.0,Freelance gig
-18-03-2025,Food,-11.0,Lunch
-20-03-2025,Shopping,-45.0,Books
-21-03-2025,Refund,20.0,Returned item
-23-03-2025,Leisure,-15.0,Swimming
-25-03-2025,Transport,-3.0,Train
-27-03-2025,Food,-11.0,Lunch
-30-03-2025,Entertainment,-18.0,Theatre
-01-04-2025,Food,-16.0,Groceries
-02-04-2025,Shopping,-80.0,New shoes
-03-04-2025,Transport,-3.5,Bus fare
-04-04-2025,Income,1200.0,Part-time job paycheck
-05-04-2025,Leisure,-22.0,Cinema
-06-04-2025,Entertainment,-18.0,Netflix
-07-04-2025,Food,-12.5,Lunch
-09-04-2025,Leisure,-20.0,Bowling
-10-04-2025,Gifts,-30.0,Birthday present
-11-04-2025,Transport,-5.0,Taxi
-12-04-2025,Food,-19.0,Dinner out
-14-04-2025,Bills,-115.0,Utility bill
-15-04-2025,Entertainment,-25.0,Concert
-17-04-2025,Income,200.0,Freelance gig
-18-04-2025,Food,-12.0,Lunch
-20-04-2025,Shopping,-50.0,Books
-21-04-2025,Refund,25.0,Returned jumper
-23-04-2025,Leisure,-18.0,Mini golf
-25-04-2025,Food,-11.0,Takeaway
-27-04-2025,Transport,-2.5,Bus fare
-28-04-2025,Entertainment,-15.0,Netflix
-01-05-2025,Food,-15.0,Groceries
-02-05-2025,Leisure,-20.0,Cinema
-03-05-2025,Transport,-3.0,Bus fare
-04-05-2025,Income,1200.0,Part-time job paycheck
-05-05-2025,Entertainment,-18.0,Netflix
-06-05-2025,Shopping,-75.0,New shoes
-07-05-2025,Food,-12.0,Lunch
-09-05-2025,Leisure,-25.0,Bowling
-10-05-2025,Transport,-4.0,Taxi
-11-05-2025,Gifts,-30.0,Birthday present
-12-05-2025,Food,-18.0,Dinner out
-14-05-2025,Entertainment,-25.0,Concert
-15-05-2025,Income,200.0,Freelance gig
-16-05-2025,Shopping,-50.0,Books
-17-05-2025,Refund,20.0,Returned item
-18-05-2025,Leisure,-15.0,Swimming
-20-05-2025,Food,-11.0,Takeaway
-21-05-2025,Bills,-110.0,Utility bill
-23-05-2025,Transport,-3.0,Train
-25-05-2025,Food,-12.0,Lunch
-27-05-2025,Entertainment,-18.0,Theatre
-01-06-2025,Food,-16.0,Groceries
-02-06-2025,Leisure,-22.0,Cinema
-03-06-2025,Transport,-3.5,Bus fare
-04-06-2025,Income,1200.0,Part-time job paycheck
-05-06-2025,Shopping,-80.0,New jacket
-06-06-2025,Entertainment,-18.0,Netflix
-07-06-2025,Food,-12.5,Lunch
-09-06-2025,Leisure,-20.0,Bowling
-10-06-2025,Transport,-5.0,Taxi
-11-06-2025,Gifts,-30.0,Birthday present
-12-06-2025,Food,-19.0,Dinner out
-14-06-2025,Bills,-115.0,Utility bill
-15-06-2025,Entertainment,-25.0,Concert
-17-06-2025,Income,200.0,Freelance gig
-18-06-2025,Food,-12.0,Lunch
-20-06-2025,Shopping,-50.0,Books
-21-06-2025,Refund,25.0,Returned jumper
-23-06-2025,Leisure,-18.0,Mini golf
-25-06-2025,Food,-11.0,Takeaway
-27-06-2025,Transport,-2.5,Bus fare
-28-06-2025,Entertainment,-15.0,Netflix
-01-07-2025,Food,-15.0,Groceries
-02-07-2025,Leisure,-20.0,Cinema
-03-07-2025,Transport,-3.0,Bus fare
-04-07-2025,Income,1200.0,Part-time job paycheck
-05-07-2025,Entertainment,-18.0,Netflix
-06-07-2025,Shopping,-75.0,New shoes
-07-07-2025,Food,-12.0,Lunch
-09-07-2025,Leisure,-25.0,Bowling
-10-07-2025,Transport,-4.0,Taxi
-11-07-2025,Gifts,-30.0,Birthday present
-12-07-2025,Food,-18.0,Dinner out
-14-07-2025,Entertainment,-25.0,Concert
-15-07-2025,Income,200.0,Freelance gig
-16-07-2025,Shopping,-50.0,Books
-17-07-2025,Refund,20.0,Returned item
-18-07-2025,Leisure,-15.0,Swimming
-20-07-2025,Food,-11.0,Takeaway
-21-07-2025,Bills,-110.0,Utility bill
-23-07-2025,Transport,-3.0,Train
-25-07-2025,Food,-12.0,Lunch
-27-07-2025,Entertainment,-18.0,Theatre
-01-08-2025,Food,-16.0,Groceries
-02-08-2025,Leisure,-22.0,Cinema
-03-08-2025,Transport,-3.5,Bus fare
-04-08-2025,Income,1200.0,Part-time job paycheck
-05-08-2025,Shopping,-80.0,New jacket
-06-08-2025,Entertainment,-18.0,Netflix
-07-08-2025,Food,-12.5,Lunch
-09-08-2025,Leisure,-20.0,Bowling
-10-08-2025,Transport,-5.0,Taxi
-11-08-2025,Gifts,-30.0,Birthday present
-12-08-2025,Food,-19.0,Dinner out
-14-08-2025,Bills,-115.0,Utility bill
-15-08-2025,Entertainment,-25.0,Concert
-17-08-2025,Income,200.0,Freelance gig
-18-08-2025,Food,-12.0,Lunch
-20-08-2025,Shopping,-50.0,Books
-21-08-2025,Refund,25.0,Returned jumper
-23-08-2025,Leisure,-18.0,Mini golf
-25-08-2025,Food,-11.0,Takeaway
-27-08-2025,Transport,-2.5,Bus fare
-28-08-2025,Entertainment,-15.0,Netflix
-01-09-2025,Food,-12.3,Groceries
-02-09-2025,Leisure,-25.0,Cinema
-03-09-2025,Transport,-2.8,Bus fare
-04-09-2025,Entertainment,-12.99,Netflix subscription
-05-09-2025,Income,1200.0,Part-time job paycheck
-06-09-2025,Bills,-45.0,Phone bill
-07-09-2025,Food,-18.75,Dinner out
-08-09-2025,Transport,-3.5,Train ticket
-09-09-2025,Leisure,-40.0,Football match
-10-09-2025,Food,-7.99,Lunch
-12-09-2025,Shopping,-60.0,New shoes
-13-09-2025,Gifts,-30.0,Birthday present
-15-09-2025,Refund,20.0,Returned item
-17-09-2025,Bills,-100.0,Utility bill
-19-09-2025,Food,-10.99,Takeaway
-21-09-2025,Entertainment,-59.99,New game
-23-09-2025,Leisure,-15.0,Swimming
-25-09-2025,Income,200.0,Freelance gig
-27-09-2025,Transport,-5.0,Taxi
-30-09-2025,Food,-25.0,Groceries
-28-09-2025,Shopping,-40.0,Books
-29-09-2025,Leisure,-18.0,Mini golf
-01-10-2025,Food,-15.0,Groceries
-02-10-2025,Leisure,-12.0,Bowling
-03-10-2025,Transport,-2.5,Bus fare
-04-10-2025,Income,1200.0,Part-time job paycheck
-05-10-2025,Bills,-50.0,Phone bill
-06-10-2025,Entertainment,-12.99,Netflix
-07-10-2025,Shopping,-80.0,New jacket
-08-10-2025,Food,-9.99,Takeaway
-10-10-2025,Leisure,-20.0,Mini golf
-12-10-2025,Transport,-3.2,Train
-14-10-2025,Bills,-90.0,Gas bill
-16-10-2025,Entertainment,-30.0,Concert ticket
-18-10-2025,Food,-13.25,Restaurant
-20-10-2025,Leisure,-25.0,Cinema
-22-10-2025,Refund,15.0,Returned shirt
-24-10-2025,Shopping,-40.0,Books
-26-10-2025,Transport,-2.9,Bus fare
-28-10-2025,Income,100.0,Tutoring
-29-10-2025,Leisure,-60.0,Football match
-31-10-2025,Food,-19.5,Groceries
-30-10-2025,Entertainment,-15.0,Theatre
-01-11-2025,Food,-20.0,Groceries
-02-11-2025,Leisure,-10.0,Swimming
-03-11-2025,Income,1200.0,Part-time job paycheck
-04-11-2025,Bills,-60.0,Phone bill
-05-11-2025,Entertainment,-59.99,New video game
-06-11-2025,Transport,-3.5,Bus fare
-07-11-2025,Food,-14.75,Lunch
-08-11-2025,Shopping,-90.0,Winter coat
-09-11-2025,Leisure,-25.0,Cinema
-10-11-2025,Refund,30.0,Returned shoes
-12-11-2025,Bills,-110.0,Utility bill
-14-11-2025,Transport,-2.8,Bus
-16-11-2025,Food,-23.0,Dinner out
-18-11-2025,Entertainment,-15.0,Spotify
-20-11-2025,Shopping,-50.0,Backpack
-22-11-2025,Transport,-5.0,Taxi
-24-11-2025,Income,150.0,Freelance work
-26-11-2025,Leisure,-35.0,Bowling
-28-11-2025,Entertainment,-20.0,Cinema
-30-11-2025,Food,-18.5,Groceries
-29-11-2025,Shopping,-45.0,Books
-01-12-2025,Food,-25.0,Christmas groceries
-02-12-2025,Leisure,-40.0,Christmas market
-03-12-2025,Income,1200.0,Part-time job paycheck
-04-12-2025,Bills,-55.0,Phone bill
-05-12-2025,Entertainment,-20.0,Cinema
-06-12-2025,Food,-35.0,Dinner out
-07-12-2025,Shopping,-100.0,Christmas gifts
-08-12-2025,Transport,-2.8,Bus
-09-12-2025,Leisure,-15.0,Ice skating
-11-12-2025,Bills,-120.0,Heating bill
-13-12-2025,Refund,25.0,Returned jumper
-15-12-2025,Food,-28.0,Lunch
-17-12-2025,Entertainment,-15.0,Spotify
-19-12-2025,Shopping,-75.0,Clothes
-21-12-2025,Transport,-4.0,Taxi
-23-12-2025,Leisure,-20.0,Cinema
-25-12-2025,Food,-60.0,Christmas dinner
-27-12-2025,Income,300.0,Freelance project
-29-12-2025,Bills,-80.0,Internet bill
-31-12-2025,Leisure,-50.0,New Year's Eve party
-30-12-2025,Shopping,-55.0,Party supplies
+01-01-2025,Income,1300.0,Part-time salary
+01-01-2025,Food,-16.0,Lunch at café
+02-01-2025,Shopping,-50.0,Jeans
+02-01-2025,Entertainment,-15.0,Netflix subscription
+03-01-2025,Food,-18.0,Groceries
+03-01-2025,Leisure,-22.0,Gym session
+04-01-2025,Bills,-75.0,Electricity bill
+05-01-2025,Transport,-10.0,Bus fare
+05-01-2025,Food,-12.0,Coffee
+06-01-2025,Rent,-680.0,Monthly rent
+06-01-2025,Shopping,-55.0,T-shirt
+07-01-2025,Entertainment,-18.0,Concert ticket
+07-01-2025,Food,-20.0,Dinner out
+08-01-2025,Bills,-60.0,Internet bill
+08-01-2025,Leisure,-28.0,Swimming
+09-01-2025,Food,-20.0,Lunch
+10-01-2025,Income,300.0,Freelance gig
+10-01-2025,Transport,-12.0,Train fare
+11-01-2025,Food,-25.0,Groceries
+12-01-2025,Shopping,-50.0,Backpack
+12-01-2025,Entertainment,-15.0,Spotify subscription
+13-01-2025,Bills,-70.0,Gas bill
+13-01-2025,Leisure,-28.0,Bowling
+14-01-2025,Food,-23.0,Dinner
+15-01-2025,Refund,40.0,Returned shirt
+15-01-2025,Shopping,-45.0,Books
+16-01-2025,Entertainment,-20.0,Movie night
+16-01-2025,Food,-12.0,Lunch wrap
+17-01-2025,Transport,-12.0,Fuel
+18-01-2025,Income,250.0,Tutoring session
+18-01-2025,Leisure,-30.0,Karaoke night
+19-01-2025,Food,-18.5,Groceries
+20-01-2025,Shopping,-55.0,Desk chair
+21-01-2025,Entertainment,-15.0,Netflix subscription
+21-01-2025,Food,-14.0,Lunch
+22-01-2025,Bills,-65.0,Water bill
+22-01-2025,Transport,-10.0,Taxi
+23-01-2025,Leisure,-28.0,Museum visit
+24-01-2025,Food,-21.0,Dinner
+25-01-2025,Shopping,-60.0,Sports gear
+25-01-2025,Entertainment,-16.0,Spotify subscription
+26-01-2025,Income,300.0,Side hustle
+26-01-2025,Food,-22.0,Groceries
+27-01-2025,Transport,-14.0,Bus fare
+28-01-2025,Shopping,-50.0,Clothes
+29-01-2025,Leisure,-30.0,Arcade
+30-01-2025,Food,-18.0,Dinner
+31-01-2025,Refund,10.0,Returned mug
+31-01-2025,Refund,55.0,Returned book
+01-02-2025,Income,1240.0,Part-time salary
+01-02-2025,Food,-8.5,Coffee and pastry
+02-02-2025,Entertainment,-13.0,Netflix subscription
+02-02-2025,Leisure,-18.0,Swimming session
+03-02-2025,Bills,-81.0,Electricity bill
+03-02-2025,Food,-19.4,Groceries
+04-02-2025,Shopping,-38.0,Books
+05-02-2025,Transport,-5.0,Bus fare
+05-02-2025,Food,-12.6,Lunch with friends
+06-02-2025,Refund,120.0,Returned shoes
+06-02-2025,Leisure,-22.0,Gym session
+07-02-2025,Entertainment,-12.0,Spotify subscription
+08-02-2025,Bills,-44.0,Internet bill
+08-02-2025,Food,-16.4,Groceries
+09-02-2025,Transport,-13.0,Taxi ride
+10-02-2025,Income,250.0,Freelance gig
+10-02-2025,Shopping,-62.0,Hoodie
+11-02-2025,Rent,-680.0,Monthly rent
+11-02-2025,Bills,-63.0,Gas bill
+12-02-2025,Leisure,-26.0,Bowling
+13-02-2025,Food,-20.0,Groceries
+14-02-2025,Entertainment,-30.0,Valentine’s dinner
+15-02-2025,Shopping,-48.0,Desk lamp
+16-02-2025,Transport,-11.0,Fuel
+16-02-2025,Bills,-13.0,Cloud storage
+17-02-2025,Food,-15.0,Groceries
+18-02-2025,Income,280.0,Side project
+18-02-2025,Leisure,-34.0,Karaoke night
+19-02-2025,Entertainment,-12.0,Spotify subscription
+20-02-2025,Shopping,-70.0,Jacket
+20-02-2025,Food,-18.2,Groceries
+21-02-2025,Transport,-9.0,Train fare
+21-02-2025,Leisure,-20.0,Badminton session
+22-02-2025,Bills,-52.0,Water bill
+23-02-2025,Food,-21.8,Groceries
+24-02-2025,Shopping,-42.0,Shoes
+25-02-2025,Entertainment,-14.0,Netflix subscription
+25-02-2025,Food,-17.0,Takeaway dinner
+26-02-2025,Income,190.0,Tutoring
+26-02-2025,Leisure,-28.0,Cinema
+27-02-2025,Transport,-7.5,Bus fare
+28-02-2025,Food,-19.5,Groceries
+28-02-2025,Leisure,-16.0,Table tennis
+01-03-2025,Income,1150.0,Part-time salary
+01-03-2025,Food,-18.0,Lunch at café
+02-03-2025,Entertainment,-20.0,Netflix subscription
+02-03-2025,Food,-22.0,Groceries
+03-03-2025,Bills,-110.0,Electricity bill
+04-03-2025,Shopping,-85.0,Hoodie
+05-03-2025,Transport,-12.0,Bus fare
+05-03-2025,Leisure,-32.0,Gym session
+06-03-2025,Refund,70.0,Returned T-shirt
+06-03-2025,Food,-20.0,Coffee and snacks
+07-03-2025,Entertainment,-18.0,Spotify subscription
+08-03-2025,Bills,-65.0,Internet bill
+08-03-2025,Leisure,-38.0,Bowling
+09-03-2025,Shopping,-60.0,Books
+10-03-2025,Income,200.0,Freelance gig
+10-03-2025,Food,-28.0,Groceries
+11-03-2025,Rent,-680.0,Monthly rent
+11-03-2025,Bills,-80.0,Gas bill
+12-03-2025,Leisure,-35.0,Concert ticket
+13-03-2025,Food,-22.0,Groceries
+14-03-2025,Entertainment,-25.0,Movie night
+15-03-2025,Refund,160.0,Returned headphones
+15-03-2025,Shopping,-55.0,Shirt
+16-03-2025,Bills,-20.0,Cloud storage
+16-03-2025,Transport,-18.0,Train fare
+17-03-2025,Food,-30.0,Groceries
+18-03-2025,Income,230.0,Side hustle
+18-03-2025,Leisure,-45.0,Karaoke night
+19-03-2025,Entertainment,-18.0,Spotify subscription
+20-03-2025,Food,-28.0,Groceries
+21-03-2025,Shopping,-65.0,Desk chair
+21-03-2025,Transport,-18.0,Fuel
+22-03-2025,Leisure,-28.0,Badminton
+23-03-2025,Bills,-70.0,Water bill
+23-03-2025,Food,-25.0,Takeaway dinner
+24-03-2025,Shopping,-75.0,Backpack
+25-03-2025,Entertainment,-22.0,Netflix subscription
+26-03-2025,Income,160.0,Tutoring session
+26-03-2025,Food,-28.0,Groceries
+27-03-2025,Transport,-15.0,Taxi
+28-03-2025,Shopping,-60.0,Shoes
+29-03-2025,Leisure,-35.0,Cinema
+30-03-2025,Food,-30.0,Groceries
+31-03-2025,Entertainment,-18.0,Mobile game credits
+01-04-2025,Income,1250.0,Part-time salary
+01-04-2025,Food,-11.5,Breakfast at café
+02-04-2025,Entertainment,-14.0,Netflix subscription
+02-04-2025,Food,-6.8,Coffee and pastry
+03-04-2025,Bills,-82.0,Electricity bill
+03-04-2025,Food,-20.4,Groceries
+04-04-2025,Leisure,-18.0,Swimming session
+05-04-2025,Shopping,-42.0,T-shirt
+05-04-2025,Food,-12.2,Lunch with friends
+06-04-2025,Refund,150.0,Returned headphones
+07-04-2025,Leisure,-24.0,Indoor climbing
+07-04-2025,Food,-7.0,Sandwich
+08-04-2025,Bills,-47.0,Internet bill
+08-04-2025,Entertainment,-12.0,Spotify subscription
+09-04-2025,Shopping,-62.0,Running shorts
+09-04-2025,Transport,-4.5,Bus fare
+10-04-2025,Income,260.0,Freelance article
+10-04-2025,Leisure,-26.0,Badminton court booking
+11-04-2025,Transport,-14.5,Taxi ride
+11-04-2025,Food,-6.2,Coffee and bagel
+12-04-2025,Shopping,-85.0,Backpack
+13-04-2025,Rent,-680.0,Monthly rent
+13-04-2025,Bills,-64.0,Gas bill
+14-04-2025,Leisure,-22.0,Gym day pass
+14-04-2025,Food,-11.8,Groceries
+15-04-2025,Refund,40.0,Returned book
+15-04-2025,Entertainment,-37.0,Concert ticket
+16-04-2025,Bills,-14.0,Cloud storage
+16-04-2025,Transport,-6.0,Train ticket
+17-04-2025,Food,-19.4,Groceries
+18-04-2025,Income,320.0,Side project payment
+18-04-2025,Food,-15.5,Lunch with friends
+19-04-2025,Leisure,-30.0,Karaoke night
+20-04-2025,Income,320.0,Side hustle project
+20-04-2025,Shopping,-48.0,Desk lamp
+21-04-2025,Food,-17.0,Groceries
+21-04-2025,Transport,-9.0,Uber to campus
+22-04-2025,Leisure,-32.0,Cycling day trip
+23-04-2025,Bills,-54.0,Water bill
+23-04-2025,Entertainment,-12.5,Podcast subscription
+24-04-2025,Food,-21.8,Groceries
+25-04-2025,Shopping,-66.0,Hoodie
+26-04-2025,Refund,200.0,Returned shoes
+26-04-2025,Leisure,-20.0,Swimming session
+27-04-2025,Food,-18.5,Groceries
+27-04-2025,Entertainment,-11.0,Mobile game credits
+28-04-2025,Income,180.0,Tutoring session
+28-04-2025,Transport,-11.0,Fuel
+29-04-2025,Entertainment,-14.0,Netflix subscription
+29-04-2025,Shopping,-38.0,Books
+30-04-2025,Food,-19.0,Takeaway dinner
+30-04-2025,Leisure,-14.0,Paddle boats in park
+01-05-2025,Income,1150.0,Part-time salary
+01-05-2025,Food,-22.0,Lunch at café
+02-05-2025,Entertainment,-25.0,Netflix subscription
+02-05-2025,Food,-28.0,Groceries
+03-05-2025,Bills,-115.0,Electricity bill
+04-05-2025,Shopping,-90.0,Clothes
+05-05-2025,Transport,-14.0,Bus fare
+05-05-2025,Leisure,-35.0,Gym session
+06-05-2025,Refund,35.0,Returned shirt
+06-05-2025,Food,-24.0,Coffee
+07-05-2025,Entertainment,-20.0,Spotify subscription
+08-05-2025,Bills,-70.0,Internet bill
+08-05-2025,Leisure,-45.0,Bowling
+09-05-2025,Shopping,-60.0,Books
+10-05-2025,Income,220.0,Freelance project
+10-05-2025,Food,-32.0,Groceries
+11-05-2025,Rent,-680.0,Monthly rent
+11-05-2025,Bills,-80.0,Gas bill
+12-05-2025,Leisure,-40.0,Concert ticket
+13-05-2025,Food,-28.0,Groceries
+14-05-2025,Entertainment,-28.0,Movie night
+15-05-2025,Refund,135.0,Returned headphones
+15-05-2025,Shopping,-60.0,T-shirt
+16-05-2025,Bills,-25.0,Cloud storage
+16-05-2025,Transport,-20.0,Train fare
+17-05-2025,Food,-35.0,Groceries
+18-05-2025,Income,200.0,Side hustle
+18-05-2025,Leisure,-50.0,Karaoke
+19-05-2025,Entertainment,-20.0,Spotify subscription
+20-05-2025,Food,-32.0,Groceries
+21-05-2025,Shopping,-70.0,Desk lamp
+21-05-2025,Transport,-20.0,Fuel
+22-05-2025,Leisure,-40.0,Badminton
+23-05-2025,Bills,-75.0,Water bill
+23-05-2025,Food,-28.0,Takeaway
+24-05-2025,Shopping,-75.0,Backpack
+25-05-2025,Entertainment,-25.0,Netflix subscription
+26-05-2025,Income,180.0,Tutoring session
+26-05-2025,Food,-35.0,Groceries
+27-05-2025,Transport,-18.0,Taxi
+28-05-2025,Shopping,-65.0,Shoes
+29-05-2025,Leisure,-42.0,Cinema
+30-05-2025,Food,-35.0,Groceries
+31-05-2025,Entertainment,-20.0,Mobile game credits
+01-06-2025,Income,1200.0,Part-time salary
+01-06-2025,Food,-14.5,Lunch at café
+02-06-2025,Shopping,-72.0,New shoes
+02-06-2025,Entertainment,-16.0,Netflix subscription
+03-06-2025,Food,-19.0,Groceries
+03-06-2025,Leisure,-28.0,Gym session
+04-06-2025,Bills,-88.0,Electricity bill
+04-06-2025,Transport,-9.5,Bus fare
+05-06-2025,Food,-11.0,Coffee
+06-06-2025,Rent,-680.0,Monthly rent
+06-06-2025,Shopping,-65.0,Hoodie
+07-06-2025,Entertainment,-20.0,Concert ticket
+07-06-2025,Food,-21.5,Dinner out
+08-06-2025,Bills,-58.0,Internet bill
+08-06-2025,Leisure,-32.0,Swimming
+09-06-2025,Food,-16.0,Lunch
+10-06-2025,Income,250.0,Freelance project
+10-06-2025,Transport,-12.0,Train fare
+11-06-2025,Food,-23.0,Groceries
+12-06-2025,Shopping,-50.0,Backpack
+12-06-2025,Entertainment,-14.0,Spotify subscription
+13-06-2025,Bills,-72.0,Gas bill
+13-06-2025,Leisure,-26.0,Bowling
+14-06-2025,Food,-19.5,Dinner
+15-06-2025,Refund,30.0,Returned shirt
+15-06-2025,Shopping,-45.0,Books
+16-06-2025,Entertainment,-18.0,Movie night
+16-06-2025,Food,-12.0,Lunch wrap
+17-06-2025,Transport,-11.0,Fuel
+18-06-2025,Income,200.0,Tutoring session
+18-06-2025,Leisure,-34.0,Karaoke night
+19-06-2025,Food,-17.5,Groceries
+20-06-2025,Shopping,-55.0,Desk chair
+21-06-2025,Entertainment,-12.0,Netflix subscription
+21-06-2025,Food,-14.0,Lunch
+22-06-2025,Bills,-60.0,Water bill
+22-06-2025,Transport,-8.0,Taxi
+23-06-2025,Leisure,-29.0,Museum visit
+24-06-2025,Food,-20.0,Dinner
+25-06-2025,Shopping,-68.0,Sports gear
+25-06-2025,Entertainment,-15.0,Spotify subscription
+26-06-2025,Income,180.0,Side hustle
+26-06-2025,Food,-22.0,Groceries
+27-06-2025,Transport,-14.0,Bus fare
+28-06-2025,Shopping,-50.0,Clothes
+29-06-2025,Leisure,-31.0,Arcade
+30-06-2025,Food,-18.0,Dinner
+30-06-2025,Bills,-70.0,Phone bill
+01-07-2025,Income,1250.0,Part-time salary
+01-07-2025,Food,-15.0,Lunch at café
+02-07-2025,Shopping,-60.0,Summer t-shirt
+02-07-2025,Entertainment,-18.0,Netflix subscription
+03-07-2025,Food,-20.0,Groceries
+03-07-2025,Leisure,-25.0,Gym session
+04-07-2025,Bills,-80.0,Electricity bill
+05-07-2025,Transport,-10.0,Bus fare
+05-07-2025,Food,-12.0,Coffee
+06-07-2025,Rent,-680.0,Monthly rent
+06-07-2025,Shopping,-55.0,Jeans
+07-07-2025,Entertainment,-20.0,Concert ticket
+07-07-2025,Food,-22.0,Dinner out
+08-07-2025,Bills,-60.0,Internet bill
+08-07-2025,Leisure,-30.0,Swimming
+09-07-2025,Food,-18.0,Lunch
+10-07-2025,Income,300.0,Freelance gig
+10-07-2025,Transport,-12.0,Train fare
+11-07-2025,Food,-25.0,Groceries
+12-07-2025,Shopping,-50.0,Backpack
+12-07-2025,Entertainment,-15.0,Spotify subscription
+13-07-2025,Bills,-70.0,Gas bill
+13-07-2025,Leisure,-28.0,Bowling
+14-07-2025,Food,-20.0,Dinner
+15-07-2025,Refund,110.0,Returned shirt
+15-07-2025,Shopping,-45.0,Books
+16-07-2025,Entertainment,-18.0,Movie night
+16-07-2025,Food,-12.0,Lunch wrap
+17-07-2025,Transport,-12.0,Fuel
+18-07-2025,Income,220.0,Tutoring session
+18-07-2025,Leisure,-32.0,Karaoke night
+19-07-2025,Food,-18.5,Groceries
+20-07-2025,Shopping,-55.0,Desk chair
+21-07-2025,Entertainment,-15.0,Netflix subscription
+21-07-2025,Food,-14.0,Lunch
+22-07-2025,Bills,-65.0,Water bill
+22-07-2025,Transport,-9.0,Taxi
+23-07-2025,Leisure,-28.0,Museum visit
+24-07-2025,Food,-21.0,Dinner
+25-07-2025,Shopping,-60.0,Sports gear
+25-07-2025,Entertainment,-16.0,Spotify subscription
+26-07-2025,Income,200.0,Side hustle
+26-07-2025,Food,-22.0,Groceries
+27-07-2025,Transport,-14.0,Bus fare
+28-07-2025,Shopping,-50.0,Clothes
+29-07-2025,Leisure,-30.0,Arcade
+30-07-2025,Food,-18.0,Dinner
+31-07-2025,Income,150.0,Freelance gig
+31-07-2025,Entertainment,-12.0,Mobile game credits
+01-08-2025,Income,1200.0,Part-time salary
+01-08-2025,Food,-18.0,Lunch at café
+02-08-2025,Shopping,-75.0,Summer shoes
+02-08-2025,Entertainment,-20.0,Netflix subscription
+03-08-2025,Food,-22.0,Groceries
+03-08-2025,Leisure,-30.0,Gym session
+04-08-2025,Bills,-90.0,Electricity bill
+05-08-2025,Transport,-12.0,Bus fare
+05-08-2025,Food,-15.0,Coffee and snacks
+06-08-2025,Rent,-680.0,Monthly rent
+06-08-2025,Shopping,-65.0,Jeans
+07-08-2025,Entertainment,-22.0,Concert ticket
+07-08-2025,Food,-25.0,Dinner out
+08-08-2025,Bills,-65.0,Internet bill
+08-08-2025,Leisure,-35.0,Swimming
+09-08-2025,Food,-20.0,Lunch
+10-08-2025,Income,250.0,Freelance gig
+10-08-2025,Transport,-14.0,Train fare
+11-08-2025,Food,-27.0,Groceries
+12-08-2025,Shopping,-55.0,Backpack
+12-08-2025,Entertainment,-18.0,Spotify subscription
+13-08-2025,Bills,-75.0,Gas bill
+13-08-2025,Leisure,-28.0,Bowling
+14-08-2025,Food,-23.0,Dinner
+15-08-2025,Refund,35.0,Returned shirt
+15-08-2025,Shopping,-50.0,Books
+16-08-2025,Entertainment,-20.0,Movie night
+16-08-2025,Food,-15.0,Lunch wrap
+17-08-2025,Transport,-13.0,Fuel
+18-08-2025,Income,200.0,Tutoring session
+18-08-2025,Leisure,-38.0,Karaoke night
+19-08-2025,Food,-22.0,Groceries
+20-08-2025,Shopping,-60.0,Desk chair
+21-08-2025,Entertainment,-18.0,Netflix subscription
+21-08-2025,Food,-16.0,Lunch
+22-08-2025,Bills,-70.0,Water bill
+22-08-2025,Transport,-10.0,Taxi
+23-08-2025,Leisure,-30.0,Museum visit
+24-08-2025,Food,-24.0,Dinner
+25-08-2025,Shopping,-65.0,Sports gear
+25-08-2025,Entertainment,-20.0,Spotify subscription
+26-08-2025,Income,180.0,Side hustle
+26-08-2025,Food,-28.0,Groceries
+27-08-2025,Transport,-15.0,Bus fare
+28-08-2025,Shopping,-55.0,Clothes
+29-08-2025,Leisure,-32.0,Arcade
+30-08-2025,Food,-20.0,Dinner
+31-08-2025,Bills,-72.0,Phone bill
+31-08-2025,Refund,30.0,Returned mug
+01-09-2025,Income,1300.0,Part-time salary
+01-09-2025,Food,-16.0,Lunch at café
+02-09-2025,Shopping,-55.0,Jeans
+02-09-2025,Entertainment,-18.0,Netflix subscription
+03-09-2025,Food,-20.0,Groceries
+03-09-2025,Leisure,-25.0,Gym session
+04-09-2025,Bills,-80.0,Electricity bill
+05-09-2025,Transport,-10.0,Bus fare
+05-09-2025,Food,-12.0,Coffee
+06-09-2025,Rent,-680.0,Monthly rent
+06-09-2025,Shopping,-50.0,T-shirt
+07-09-2025,Entertainment,-20.0,Concert ticket
+07-09-2025,Food,-22.0,Dinner out
+08-09-2025,Bills,-60.0,Internet bill
+08-09-2025,Leisure,-28.0,Swimming
+09-09-2025,Food,-18.0,Lunch
+10-09-2025,Income,400.0,Freelance gig
+10-09-2025,Transport,-12.0,Train fare
+11-09-2025,Food,-25.0,Groceries
+12-09-2025,Shopping,-45.0,Backpack
+12-09-2025,Entertainment,-15.0,Spotify subscription
+13-09-2025,Bills,-70.0,Gas bill
+13-09-2025,Leisure,-28.0,Bowling
+14-09-2025,Food,-20.0,Dinner
+15-09-2025,Refund,140.0,Returned shirt
+15-09-2025,Shopping,-40.0,Books
+16-09-2025,Entertainment,-18.0,Movie night
+16-09-2025,Food,-12.0,Lunch wrap
+17-09-2025,Transport,-12.0,Fuel
+18-09-2025,Income,300.0,Tutoring session
+18-09-2025,Leisure,-30.0,Karaoke night
+19-09-2025,Food,-18.5,Groceries
+20-09-2025,Shopping,-50.0,Desk chair
+21-09-2025,Entertainment,-15.0,Netflix subscription
+21-09-2025,Food,-14.0,Lunch
+22-09-2025,Bills,-65.0,Water bill
+22-09-2025,Transport,-9.0,Taxi
+23-09-2025,Leisure,-28.0,Museum visit
+24-09-2025,Food,-21.0,Dinner
+25-09-2025,Shopping,-55.0,Sports gear
+25-09-2025,Entertainment,-16.0,Spotify subscription
+26-09-2025,Income,250.0,Side hustle
+26-09-2025,Food,-22.0,Groceries
+27-09-2025,Transport,-14.0,Bus fare
+28-09-2025,Shopping,-50.0,Clothes
+29-09-2025,Leisure,-30.0,Arcade
+30-09-2025,Food,-18.0,Dinner
+30-09-2025,Refund,10.0,Returned mug
+30-09-2025,Refund,70.0,Returned book
+01-10-2025,Income,1300.0,Part-time salary
+01-10-2025,Food,-18.0,Lunch at café
+02-10-2025,Shopping,-60.0,New shoes
+02-10-2025,Entertainment,-20.0,Netflix subscription
+03-10-2025,Food,-22.0,Groceries
+03-10-2025,Leisure,-30.0,Gym session
+04-10-2025,Bills,-85.0,Electricity bill
+05-10-2025,Transport,-12.0,Bus fare
+05-10-2025,Food,-15.0,Coffee
+06-10-2025,Rent,-680.0,Monthly rent
+06-10-2025,Shopping,-55.0,Jeans
+07-10-2025,Entertainment,-22.0,Concert ticket
+07-10-2025,Food,-25.0,Dinner out
+08-10-2025,Bills,-65.0,Internet bill
+08-10-2025,Leisure,-35.0,Swimming
+09-10-2025,Food,-20.0,Lunch
+10-10-2025,Income,350.0,Freelance gig
+10-10-2025,Transport,-14.0,Train fare
+11-10-2025,Food,-27.0,Groceries
+12-10-2025,Shopping,-50.0,Backpack
+12-10-2025,Entertainment,-18.0,Spotify subscription
+13-10-2025,Bills,-75.0,Gas bill
+13-10-2025,Leisure,-28.0,Bowling
+14-10-2025,Food,-23.0,Dinner
+15-10-2025,Refund,30.0,Returned shirt
+15-10-2025,Shopping,-45.0,Books
+16-10-2025,Entertainment,-20.0,Movie night
+16-10-2025,Food,-12.0,Lunch wrap
+17-10-2025,Transport,-12.0,Fuel
+18-10-2025,Income,250.0,Tutoring session
+18-10-2025,Leisure,-32.0,Karaoke night
+19-10-2025,Food,-18.5,Groceries
+20-10-2025,Shopping,-55.0,Desk chair
+21-10-2025,Entertainment,-15.0,Netflix subscription
+21-10-2025,Food,-14.0,Lunch
+22-10-2025,Bills,-65.0,Water bill
+22-10-2025,Transport,-10.0,Taxi
+23-10-2025,Leisure,-28.0,Museum visit
+24-10-2025,Food,-21.0,Dinner
+25-10-2025,Shopping,-60.0,Sports gear
+25-10-2025,Entertainment,-16.0,Spotify subscription
+26-10-2025,Income,200.0,Side hustle
+26-10-2025,Food,-22.0,Groceries
+27-10-2025,Transport,-14.0,Bus fare
+28-10-2025,Shopping,-50.0,Clothes
+29-10-2025,Leisure,-30.0,Arcade
+30-10-2025,Food,-18.0,Dinner
+31-10-2025,Refund,5.0,Returned mug
+01-11-2025,Income,1400.0,Part-time salary
+01-11-2025,Food,-18.0,Lunch at café
+02-11-2025,Shopping,-60.0,Jeans
+02-11-2025,Entertainment,-20.0,Netflix subscription
+03-11-2025,Food,-22.0,Groceries
+03-11-2025,Leisure,-30.0,Gym session
+04-11-2025,Bills,-85.0,Electricity bill
+05-11-2025,Transport,-12.0,Bus fare
+05-11-2025,Food,-15.0,Coffee
+06-11-2025,Rent,-680.0,Monthly rent
+06-11-2025,Shopping,-55.0,Jeans
+07-11-2025,Entertainment,-22.0,Concert ticket
+07-11-2025,Food,-25.0,Dinner out
+08-11-2025,Bills,-65.0,Internet bill
+08-11-2025,Leisure,-35.0,Swimming
+09-11-2025,Food,-20.0,Lunch
+10-11-2025,Income,400.0,Freelance gig
+10-11-2025,Transport,-14.0,Train fare
+11-11-2025,Food,-27.0,Groceries
+12-11-2025,Shopping,-50.0,Backpack
+12-11-2025,Entertainment,-18.0,Spotify subscription
+13-11-2025,Bills,-75.0,Gas bill
+13-11-2025,Leisure,-28.0,Bowling
+14-11-2025,Food,-23.0,Dinner
+15-11-2025,Refund,100.0,Returned shirt
+15-11-2025,Shopping,-45.0,Books
+16-11-2025,Entertainment,-20.0,Movie night
+16-11-2025,Food,-12.0,Lunch wrap
+17-11-2025,Transport,-12.0,Fuel
+18-11-2025,Income,300.0,Tutoring session
+18-11-2025,Leisure,-32.0,Karaoke night
+19-11-2025,Food,-18.5,Groceries
+20-11-2025,Shopping,-55.0,Desk chair
+21-11-2025,Entertainment,-15.0,Netflix subscription
+21-11-2025,Food,-14.0,Lunch
+22-11-2025,Bills,-65.0,Water bill
+22-11-2025,Transport,-10.0,Taxi
+23-11-2025,Leisure,-28.0,Museum visit
+24-11-2025,Food,-21.0,Dinner
+25-11-2025,Shopping,-60.0,Sports gear
+25-11-2025,Entertainment,-16.0,Spotify subscription
+26-11-2025,Income,250.0,Side hustle
+26-11-2025,Food,-22.0,Groceries
+27-11-2025,Transport,-14.0,Bus fare
+28-11-2025,Shopping,-50.0,Clothes
+29-11-2025,Leisure,-30.0,Arcade
+30-11-2025,Food,-18.0,Dinner
+01-12-2025,Income,1200.0,Part-time salary
+01-12-2025,Food,-20.0,Lunch at café
+02-12-2025,Shopping,-80.0,Winter jacket
+02-12-2025,Entertainment,-25.0,Netflix subscription
+03-12-2025,Food,-28.0,Groceries
+03-12-2025,Leisure,-35.0,Gym session
+04-12-2025,Bills,-95.0,Electricity bill
+05-12-2025,Transport,-15.0,Bus fare
+05-12-2025,Food,-18.0,Coffee
+06-12-2025,Rent,-680.0,Monthly rent
+06-12-2025,Shopping,-65.0,Jeans
+07-12-2025,Entertainment,-28.0,Concert ticket
+07-12-2025,Food,-30.0,Dinner out
+08-12-2025,Bills,-70.0,Internet bill
+08-12-2025,Leisure,-38.0,Swimming
+09-12-2025,Food,-25.0,Lunch
+10-12-2025,Income,200.0,Freelance gig
+10-12-2025,Transport,-16.0,Train fare
+11-12-2025,Food,-30.0,Groceries
+12-12-2025,Shopping,-60.0,Backpack
+12-12-2025,Entertainment,-22.0,Spotify subscription
+13-12-2025,Bills,-80.0,Gas bill
+13-12-2025,Leisure,-32.0,Bowling
+14-12-2025,Food,-25.0,Dinner
+15-12-2025,Refund,32.0,Returned shirt
+15-12-2025,Shopping,-55.0,Books
+16-12-2025,Entertainment,-25.0,Movie night
+16-12-2025,Food,-18.0,Lunch wrap
+17-12-2025,Transport,-15.0,Fuel
+18-12-2025,Income,150.0,Tutoring session
+18-12-2025,Leisure,-35.0,Karaoke night
+19-12-2025,Food,-22.0,Groceries
+20-12-2025,Shopping,-70.0,Desk chair
+21-12-2025,Entertainment,-20.0,Netflix subscription
+21-12-2025,Food,-16.0,Lunch
+22-12-2025,Bills,-70.0,Water bill
+22-12-2025,Transport,-12.0,Taxi
+23-12-2025,Leisure,-30.0,Museum visit
+24-12-2025,Food,-26.0,Dinner
+25-12-2025,Shopping,-80.0,Christmas gifts
+25-12-2025,Entertainment,-22.0,Spotify subscription
+26-12-2025,Income,180.0,Side hustle
+26-12-2025,Food,-25.0,Groceries
+27-12-2025,Transport,-16.0,Bus fare
+28-12-2025,Shopping,-65.0,Clothes
+29-12-2025,Leisure,-35.0,Arcade
+30-12-2025,Food,-20.0,Dinner
+31-12-2025,Refund,15.0,Returned mug
+31-12-2025,Refund,150.0,Returned book
