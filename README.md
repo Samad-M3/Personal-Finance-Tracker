@@ -38,16 +38,16 @@ A Python-based command-line application for tracking income, expenses and visual
 ## 📊 Example Visualisations
 
 - View by Month Charts:
-![Month of May](screenshots/view_by_month_charts.png)
+![Month of May](docs/screenshots/screenshots/view_by_month_charts.png)
 
 - View by Category Charts:
-![Shopping Category](screenshots/view_by_category_charts.png)
+![Shopping Category](docs/screenshots/view_by_category_charts.png)
 
 - View Cumulative Net Balance:
-![Cumulative Net Balance](screenshots/view_cumulative_net_balance_charts.png)
+![Cumulative Net Balance](docs/screenshots/view_cumulative_net_balance_charts.png)
 
 - View All-time Overview:
-![All-time Overview](screenshots/view_all_time_overview_charts.png)
+![All-time Overview](docs/screenshots/view_all_time_overview_charts.png)
 
 ---
 
