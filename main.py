@@ -1,5 +1,5 @@
 """
-Personal Finance Tracker CLI application.
+Personal-Finance Tracker CLI application.
 
 Allows users to add transactions, view summaries by month/category, 
 visualise summaries by generating charts using pandas and matplotlib.
@@ -15,7 +15,7 @@ import calendar
 
 class FinanceTracker:
     """
-    A personal finance tracker that manages transactions and provides insights.
+    A Personal-finance tracker that manages transactions and provides insights.
 
     Stores income and expenses, and allows filtering, summarising, and 
     visualising spending patterns.
