@@ -38,7 +38,7 @@ A Python-based command-line application for tracking income, expenses and visual
 ## 📊 Example Visualisations
 
 - View by Month Charts:
-![Month of May](docs/screenshots/screenshots/view_by_month_charts.png)
+![Month of May](docs/screenshots/view_by_month_charts.png)
 
 - View by Category Charts:
 ![Shopping Category](docs/screenshots/view_by_category_charts.png)
