@@ -1,6 +1,6 @@
 # Personal-Finance Tracker 💰
 
-A Python-based command-line application for tracking income, expenses and visualising personal finances
+A Python-based command-line application for tracking income, expenses, and visualising personal finances
 
 ---
 
@@ -9,7 +9,7 @@ A Python-based command-line application for tracking income, expenses and visual
 - Add income, expenses, refunds with descriptions
 - View transactions by **month** or **category**
 - Calculate and display **cumulative net balance** across the year
-- Generate an **all-time overview** of finances across the year
+- Generate an **all-time overview** of transactions across the year
 - Save and load transactions from `transactions.csv`
 - Visualise finances with **bar charts, line charts and pie charts** using `matplotlib`
 
@@ -37,32 +37,24 @@ A Python-based command-line application for tracking income, expenses and visual
 
 ## 📊 Example Visualisations
 
-- View by Month Charts:
+### View by Month
 ![Month of May](docs/screenshots/view_by_month_charts.png)
 
-- View by Category Charts:
+### View by Category
 ![Shopping Category](docs/screenshots/view_by_category_charts.png)
 
-- View Cumulative Net Balance:
+### Cumulative Net Balance
 ![Cumulative Net Balance](docs/screenshots/view_cumulative_net_balance_charts.png)
 
-- View All-time Overview:
+### All-time Overview
 ![All-time Overview](docs/screenshots/view_all_time_overview_charts.png)
 
 ---
 
-## 🔮 Future Improvements
+## 📌 Future Improvements
 
 - **Multi-year support** → Extend the system to handle transactions across multiple years, with filters for year selection alongside months and categories
 - **Graphical User Interface (GUI)** → Add a simple, user-friendly interface to complement the command-line experience
 - **Row-level transaction management** → Enable editing and deletion of individual transactions for greater flexibility
 
 --- 
-
-## 🧑‍💻 Author 
-
-Developed by **Abdus-Samad Mohit**
-- [LinkedIn](https://linkedin.com/in/samad-m)  
-- [GitHub](https://github.com/Samad-M3)  
-
----
